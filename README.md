@@ -6,6 +6,7 @@ This workflow is designed to evaluate ECOSTRESS Land Surface Temperature (LST) o
 Please navigate to the ECOSTRESS Tutorials Repository to familiarize yourself with ECOSTRESS products. https://github.com/ECOSTRESS-Tutorials 
 
 OVERVIEW
+
 Coastal environments are experiencing increasing thermal stress due to climate change, yet monitoring water surface temperatures at high resolution remains a challenge. ECOSTRESS, aboard the International Space Station (ISS), provides thermal observations at ~70 m spatial resolution, but its coastal applications require careful preprocessing and validation.
 
 This repository contains a set of Python scripts that:
@@ -20,6 +21,7 @@ This repository contains a set of Python scripts that:
 The workflow enables global-scale validation of ECOSTRESS for coastal monitoring and provides an open, reproducible framework for integrating satellite and in-situ thermal data.
 
 REPOSITORY CONTENTS
+
 - NDBC_Retrieval+Binning.py – Download and average buoy water temperature data
 - ECOSTRESS_QC_Filter.py – Apply quality control filters to ECOSTRESS scenes
 - Geolocation Shift – Manually shift scenes using Georeferencer
