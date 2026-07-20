@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ECOSTRESS vs. Buoy Station Statistics Figure
+ECOSTRESS vs. Buoy Statistics Figure
 
 This script calculates summary statistics (N, R², Bias, RMSE, MAE) for each buoy 
 station comparing ECOSTRESS LST to buoy water temperature. It then generates a 
@@ -20,9 +20,9 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 # CONFIGURATION
-# Path to CSV file containing matched buoy and ECOSTRESS data
-CSV_PATH = '<<< REPLACE_THIS_TEXT_WITH_MATCHED_CSV_PATH.csv >>>'
-df = pd.read_csv(CSV_PATH)
+# Input CSV filename. The CSV must be in the same folder as this script.
+CSV_FILENAME = "<<<< REPLACE_THIS_TEXT_WITH_MATCHED_CSV.csv >>>"
+df = pd.read_csv(CSV_FILENAME)
 
 # Compute statistics per station
 stats_list = []

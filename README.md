@@ -1,9 +1,7 @@
-# ECOSTRESS_LST_Evaluation
-Evaluating ECOSTRESS land surface temperature data over coastal waters with in-situ buoy observations. A detailed pre-processing workflow.
+# ECOSTRESS_LST_Validation
+This processing and buoy-matchup workflow is designed to evaluate ECOSTRESS Land Surface Temperature (LST) observations against NOAA NDBC buoy water temperature measurements in coastal environments.
 
-This workflow is designed to evaluate ECOSTRESS Land Surface Temperature (LST) observations against NOAA NDBC buoy water temperature measurements in coastal environments.
-
-Please navigate to the ECOSTRESS Tutorials Repository to familiarize yourself with ECOSTRESS products. https://github.com/ECOSTRESS-Tutorials 
+Please navigate to the ECOSTRESS Tutorials Repository to familiarize yourself with ECOSTRESS products. https://github.com/ECOSTRESS-Tutorials
 
 OVERVIEW
 
@@ -18,21 +16,20 @@ This repository contains a set of Python scripts that:
 - Compare ECOSTRESS LST with in-situ buoy temperatures
 - Generate figures and statistics for validation
 
-The workflow enables global-scale validation of ECOSTRESS for coastal monitoring and provides an open, reproducible framework for integrating satellite and in-situ thermal data.
+This workflow enables global-scale validation of ECOSTRESS for coastal monitoring and provides an open, reproducible framework for integrating satellite and in-situ thermal data.
 
 REPOSITORY CONTENTS
 
-- NDBC_Retrieval+Binning.py – Download and average buoy water temperature data
-- ECOSTRESS_QC_Filter.py – Apply quality control filters to ECOSTRESS scenes
-- GeoViewer_v1.12.py – Manually shift scenes using Georeferencer
-- Vectorize_Mask.py - Invert and vectorize the ECOSTRESS water product
-- Land_Mask.py – Remove land pixels from scenes
-- Calibration_LOESS_Graphs.py - Develop an average baseline and apply threshold
-- Compute_ALL_LOESS.py – Remove edge-of-cloud artifacts from scenes
-- ECOSTRESS_binning.py – Align ECOSTRESS overpasses with buoy timestamps
-- Pixel_Window_Extraction.py – Extract and average pixels around buoy locations
-- Scatter_Plot.py – Create scatterplot visualization with statistics
-- PDF_Plot.py - Probability Density Function plot
+- NDBC_v2.py – Download and average buoy water temperature data
+- QC_v22.py – Run quality and confidence controls on ECOSTRESS scenes
+- GeoViewer_69.py – Manually shift scenes using GeoViewer
+- Land_shp_v2.py - Invert and vectorize the ECOSTRESS water mask layer to produce a land boundary shapefile.
+- Land_Mask_v3.py – Remove land pixels from scenes
+- LOESS_v16.py - Develop an average baseline and apply thresholds to remove outliers from scenes
+- Binning_v4.py – Align ECOSTRESS overpasses with buoy timestamps
+- Pixel_Extraction_v4.py – Extract and average pixels around buoy locations
+- Scatter_Plot_v2.py – Create scatterplot visualization with statistics
+- PDF_Plot_v2.py - Create a probability density function plot
 - Statistics_Boxplots.py - Individual buoy statistics box and whisker plots
 
 CONTACTS
